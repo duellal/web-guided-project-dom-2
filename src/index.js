@@ -52,11 +52,19 @@ Array.from(links).forEach(link => {
 // 👉 TASK 3- Create a function that launches!
 // It should open the confirmation modal.
 // Add it as an event listener for click events on the launch button.
-
+function launch() {
+  modal.classList.remove("off");
+}
+launchButton.addEventListener("click", launch);
 
 // 👉 TASK 4- Create a function to confirm the launch.
 // It should close the modal and display a success report.
 // Add it as a listener for clicks on the confirmation button.
+function confirm() {
+  modal.classList.add("off");
+  successMessage.classList.remove("off");
+}
+confirmButton.addEventListener("click", confirm);
 
 
 // 👉 TASK 5- Create a function to cancel the launch.
